@@ -35,7 +35,7 @@ Create a function named clean_name that takes one argument: the student's name (
 If the name starts with an underscore, the function should return the name without it. 
 Otherwise, it should return the name unchanged.
 You don't need to handle input or call the function at all.'''
-
+'''
 def new_name(text): 
     text = text.replace("_", " ")
     print(f"new sentence {text}")
@@ -43,7 +43,28 @@ def new_name(text):
 sentence=input("Enter a sentence: ")
 
 new_name(sentence)
+'''
 
+def new_list(text): 
+    name_list=text.split(",")
+    print(name_list)
+
+    modified_text=[]
+    for names in name_list: 
+        new_text=names.replace("_","")
+        modified_text.append(new_text)
+    print(modified_text)
+    print(type(modified_text))
+
+    result=", ".join(modified_text)
+    print(result)
+    print(type(result))
+
+input_text= input("Enter the name: ")
+
+new_list(input_text)
+
+    
 
 
 
