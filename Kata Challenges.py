@@ -44,7 +44,7 @@ sentence=input("Enter a sentence: ")
 
 new_name(sentence)
 '''
-
+'''
 def new_list(text): 
     name_list=text.split(",")
     print(name_list)
@@ -64,7 +64,7 @@ input_text= input("Enter the name: ")
 
 new_list(input_text)
 
-    
+'''    
 
 
 
@@ -75,3 +75,29 @@ The function should return the corresponding amount in Yuan as an int.
 For this exercise, use a conversion rate of 1 Dollar = 7.15 Yuan.
 There's no need to handle user input or invoke the function.
 Hint: To be able to perform arithmetic operations, you need to use the int function on the string that holds the amount of money.'''
+
+
+'''
+
+Task
+
+Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+Mind the input validation.
+
+'''
+def sum_array(arr):
+    if not arr or len(arr) < 3:
+        return 0
+    
+    max_result=max(arr)
+    min_result=min(arr)
+
+    arr.remove(max_result)
+    arr.remove(min_result)
+
+    return sum(arr)
+
+print(sum_array([6, 2, 1, -3, 10]))
