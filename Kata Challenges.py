@@ -208,5 +208,5 @@ def count_positives_sum_negatives(arr):
     return [pos, neg] if len(arr) else []
 
 #lesson learned - look for input validation line number 179
-'''
 
+'''
