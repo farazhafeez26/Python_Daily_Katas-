@@ -217,7 +217,7 @@ Write a program where Alex can input (n) how many times the hoop goes round and 
 
 If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
 If he doesn't get 10 hoops, return the string "Keep at it until you get it".'''
-
+'''
 def hoop_count(n):
     # Good Luck!
    
@@ -225,4 +225,16 @@ def hoop_count(n):
         return "Great, now move on to tricks"
     else: 
         return "Keep at it until you get it"
-    
+    '''
+
+
+'''def even_or_odd(number):
+  if number%2==0: 
+      return "Even"
+  else:
+      return "Odd"
+
+even_or_odd(-419)
+'''
+
+ 
