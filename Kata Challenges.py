@@ -237,4 +237,26 @@ def hoop_count(n):
 even_or_odd(-419)
 '''
 
- 
+To convert international clothing sizes (such as "xs", "s", "xxl") to European number sizes, we need to handle arbitrary amounts of the "x" modifier. The base size for medium (m) is 38, and each "x" modifies the size by adding or subtracting 2.
+def size_to_number(size):
+    base_medium = 38
+    size = size.lower()
+    
+    # Count the number of 'x' characters
+    count_x = size.count("x")
+    
+    if size.count('s') + size.count('m') + size.count('l') != 1:
+        return None
+
+    # Check for 'm' with modifiers
+    if 'm' in size and 'x' in size:
+        return None
+    # Determine the size based on the presence of 's', 'm', or 'l'
+    if "s" in size:
+        return 36 - (count_x * 2)
+    elif "m" in size:
+        return base_medium
+    elif "l" in size:
+        return 40 + (count_x * 2)
+    else:
+        return None  # Return None if the size is not recognized
