@@ -260,3 +260,24 @@ def size_to_number(size):
         return 40 + (count_x * 2)
     else:
         return None  # Return None if the size is not recognized
+    
+
+
+Pratice 2: 
+def size_to_number(size): 
+    medium_size=38
+    size=size.lower()
+
+    count_x= size.count("x")
+    
+    if "x" and "m" in size: 
+        return none 
+    
+    if "s"in size: 
+        return 36 - (count_x*2)
+    elif "m" in size:
+        return medium_size
+    elif "l" in size:
+        return 40 + (count_x+2)
+    else: 
+        return None
