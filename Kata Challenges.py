@@ -261,9 +261,9 @@ def size_to_number(size):
     else:
         return None  # Return None if the size is not recognized
     
+'''
 
-
-Pratice 2: 
+Practice 2: 
 def size_to_number(size): 
     medium_size=38
     size=size.lower()
@@ -281,3 +281,10 @@ def size_to_number(size):
         return 40 + (count_x+2)
     else: 
         return None
+
+'''
+def make_negative(number):
+    if number>0:
+        return -number
+    else: 
+        return number
