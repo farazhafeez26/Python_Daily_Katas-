@@ -263,27 +263,16 @@ def size_to_number(size):
     
 '''
 
-Practice 2: 
-def size_to_number(size): 
-    medium_size=38
-    size=size.lower()
 
-    count_x= size.count("x")
-    
-    if "x" and "m" in size: 
-        return none 
-    
-    if "s"in size: 
-        return 36 - (count_x*2)
-    elif "m" in size:
-        return medium_size
-    elif "l" in size:
-        return 40 + (count_x+2)
-    else: 
-        return None
 
 '''
 def make_negative(number):
+    if number>0:
+        return -number
+    else: 
+        return number
+    
+    def make_negative(number):
     if number>0:
         return -number
     else: 
