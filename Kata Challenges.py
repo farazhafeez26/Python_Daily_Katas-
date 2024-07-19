@@ -236,7 +236,7 @@ def hoop_count(n):
 
 even_or_odd(-419)
 '''
-
+'''
 To convert international clothing sizes (such as "xs", "s", "xxl") to European number sizes, we need to handle arbitrary amounts of the "x" modifier. The base size for medium (m) is 38, and each "x" modifies the size by adding or subtracting 2.
 def size_to_number(size):
     base_medium = 38
@@ -277,3 +277,53 @@ def make_negative(number):
         return -number
     else: 
         return number
+        '''
+
+def duplicate_encode(word):
+    # Convert the word to lowercase to ignore capitalization
+    lower_word = word.lower()
+    
+    # Count occurrences of each character
+    char_count = {}
+    for char in lower_word:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    
+    # Build the new string based on the counts
+    encoded_string = ""
+    for char in lower_word:
+        if char_count[char] == 1:
+            encoded_string += "("
+        else:
+            encoded_string += ")"
+    
+    return encoded_string
+
+# Examples
+print(duplicate_encode("din"))      # => "((("
+print(duplicate_encode("recede"))   # => "()()()"
+print(duplicate_encode("Success"))  # => ")())())"
+print(duplicate_encode("(( @"))     # => "))((" 
+
+def duplicate_encode(word):
+  char_count = {}
+  word_lower=word.lower()
+
+  for char in word: 
+    if char in char_count:
+      char_count[char]+=1
+    else:
+      char_count[char]=1
+  print(f"character {char}:{char_count}")      
+  encoded_string = ""
+  for char in word: 
+    if char_count[char]==1:
+      encoded_string+="("
+    else:
+      encoded_string+=")"
+      
+  print(encoded_string)
+      
+duplicate_encode("success")  
