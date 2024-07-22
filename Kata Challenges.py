@@ -1,3 +1,86 @@
+#22nd July Spanish Conjugator
+def conjugate(verb):
+    word_er = {
+      "yo": "o",
+      "tú": "es",
+      "él/ella/Ud.": "e",
+      "nosotros/nosotras": "emos",
+      "vosotros/vosotras": "\u00E9" + "is",  # Unicode for é
+      "ellos/ellas/Uds.": "en"
+  }
+
+    word_ar = {
+      "yo": "o",
+      "tú": "as",
+      "él/ella/Ud.": "a",
+      "nosotros/nosotras": "amos",
+      "vosotros/vosotras": "\u00E1" + "is",  # Unicode for á
+      "ellos/ellas/Uds.": "an"
+  }
+
+    word_ir = {
+      "yo": "o",
+      "tú": "es",
+      "él/ella/Ud.": "e",
+      "nosotros/nosotras": "imos",
+      "vosotros/vosotras":  "\u00ED" + "s",  # Corrected to Unicode for í
+      "ellos/ellas/Uds.": "en"
+  }
+
+    if verb[-2:] == "ar":
+        stem = verb[:-2]
+        endings = word_ar
+    elif verb[-2:] == "er":
+        stem = verb[:-2]
+        endings = word_er
+    elif verb[-2:] == "ir":
+        stem = verb[:-2]
+        endings = word_ir
+    else: 
+        return "enter a valid verb"
+
+    conjugations = [stem + v for v in endings.values()]
+
+    return {verb: conjugations}
+
+
+
+
+# Examples
+
+# Duplicate encode
+
+'''
+print(duplicate_encode("din"))      # => "((("
+print(duplicate_encode("recede"))   # => "()()()"
+print(duplicate_encode("Success"))  # => ")())())"
+print(duplicate_encode("(( @"))     # => "))((" 
+
+def duplicate_encode(word):
+  char_count = {}
+  word_lower=word.lower()
+
+  for char in word: 
+    if char in char_count:
+      char_count[char]+=1
+    else:
+      char_count[char]=1
+  print(f"character {char}:{char_count}")      
+  encoded_string = ""
+  for char in word: 
+    if char_count[char]==1:
+      encoded_string+="("
+    else:
+      encoded_string+=")"
+      
+  print(encoded_string)
+      
+duplicate_encode("success")  
+
+'''
+
+
+
 
 '''Write a function, first_and_last_equal, that takes a string as input and prints "Yes" if the first and last characters of the string are the same, or "No" otherwise. For instance, first_and_last_equal("everyone") should print “Yes!
 
@@ -278,7 +361,7 @@ def make_negative(number):
     else: 
         return number
         '''
-
+'''
 def duplicate_encode(word):
     # Convert the word to lowercase to ignore capitalization
     lower_word = word.lower()
@@ -301,29 +384,6 @@ def duplicate_encode(word):
     
     return encoded_string
 
-# Examples
-print(duplicate_encode("din"))      # => "((("
-print(duplicate_encode("recede"))   # => "()()()"
-print(duplicate_encode("Success"))  # => ")())())"
-print(duplicate_encode("(( @"))     # => "))((" 
 
-def duplicate_encode(word):
-  char_count = {}
-  word_lower=word.lower()
+'''
 
-  for char in word: 
-    if char in char_count:
-      char_count[char]+=1
-    else:
-      char_count[char]=1
-  print(f"character {char}:{char_count}")      
-  encoded_string = ""
-  for char in word: 
-    if char_count[char]==1:
-      encoded_string+="("
-    else:
-      encoded_string+=")"
-      
-  print(encoded_string)
-      
-duplicate_encode("success")  
