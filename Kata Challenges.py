@@ -1,3 +1,25 @@
+
+#23rd July Spanish Conjugator
+
+def check_three_and_two(array):
+    if len(array) != 5:
+        return False
+    
+    a_count = array.count("a")
+    b_count = array.count("b")
+    c_count = array.count("c")
+
+    counts= [a_count,b_count,c_count]
+
+    return sorted(counts)==[0,2,3]
+
+
+
+
+
+
+'''
+
 #22nd July Spanish Conjugator
 def conjugate(verb):
     word_er = {
@@ -43,7 +65,7 @@ def conjugate(verb):
 
     return {verb: conjugations}
 
-
+'''
 
 
 # Examples
