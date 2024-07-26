@@ -1,5 +1,47 @@
 
-#23rd July Spanish Conjugator
+
+
+
+#-----------------------------------------------
+'''Create a function taking a positive integer between 1 and 3999 (both included) as its parameter and returning a string containing the Roman Numeral representation of that integer.
+
+Modern Roman numerals are written by expressing each digit separately starting with the leftmost digit and skipping any digit with a value of zero. There cannot be more than 3 identical symbols in a row.
+
+In Roman numerals:
+
+1990 is rendered: 1000=M + 900=CM + 90=XC; resulting in MCMXC.
+2008 is written as 2000=MM, 8=VIII; or MMVIII.
+1666 uses each Roman symbol in descending order: MDCLXVI.
+   1 -->       "I"
+1000 -->       "M"
+1666 --> "MDCLXVI"
+
+'''
+
+def solution(n):
+    if 1 <= n <= 3999:
+        roman_map = {
+            1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C',
+            90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'
+        }
+        roman = ''
+        for value, symbol in roman_map.items():
+            print(value, symbol)
+            while n >= value:
+                roman += symbol
+                n -= value
+        return roman
+    else:
+        return 'Please enter a number between 1 and 3999'
+
+
+
+#-----------------------------------------------
+
+
+'''
+
+#23rd July Check three and two 7kyu 
 
 def check_three_and_two(array):
     if len(array) != 5:
@@ -12,8 +54,8 @@ def check_three_and_two(array):
     counts= [a_count,b_count,c_count]
 
     return sorted(counts)==[0,2,3]
-
-
+'''
+#-----------------------------------------------
 
 
 
