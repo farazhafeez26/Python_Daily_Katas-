@@ -1,4 +1,47 @@
 
+#-----------------------------------------------
+
+
+# 23rd Sept - Warm up 
+
+languages= ["python","Ruby", "java", "perl" ]
+languages.append("c++")
+languages.remove("java")
+
+languages.sort()
+
+print(languages)
+
+
+movies = {
+    "Inception": {"year": 2010, "director": "Christopher Nolan", "genre": "Sci-Fi"},
+    "The Matrix": {"year": 1999, "director": "Lana Wachowski, Lilly Wachowski", "genre": "Sci-Fi"}
+}
+
+movies["Jurassic Park"]={"year": 2010, "director": "Steven Spielberg", "genre": "Sci-Fi"}
+
+#print(movies)
+
+def movie_info(title):
+    if title in movies:
+        details=movies[title]
+        print(f"{title}:")
+
+        for  x, y in details.items():
+            print(f"{x}:{y}")
+    else:
+        print("not found")
+
+def find_movie_year(title):
+    if title in movies: 
+        return movies[title]["year"]
+    else: 
+        print("not found")
+
+
+title=input("Enter the movie title:")
+
+movie_info(title)
 
 
 
@@ -15,6 +58,8 @@ In Roman numerals:
    1 -->       "I"
 1000 -->       "M"
 1666 --> "MDCLXVI"
+
+'''
 
 '''
 
@@ -59,7 +104,7 @@ def solution(n):
             n-=key
     return roman_string
 
-    
+'''    
 
 #-----------------------------------------------
 
