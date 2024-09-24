@@ -1,9 +1,32 @@
 
+
+#24th Sept - Warm up 
+def word_frequency(word): 
+    words= word.lower().split()
+    print(words)
+
+    frequency={}
+
+    for word in words: 
+        if word in frequency: 
+            frequency[word]+=1
+        else: 
+            frequency[word]=1
+    
+    print(frequency)
+    
+    for word, count in frequency.items(): 
+        print(f"'{word}':{count}")
+
+text = "This is a test. This test is simple, but this is just a test."
+word_frequency(text)      
+
 #-----------------------------------------------
 
 
 # 23rd Sept - Warm up 
 
+'''
 languages= ["python","Ruby", "java", "perl" ]
 languages.append("c++")
 languages.remove("java")
@@ -25,7 +48,7 @@ movies["Jurassic Park"]={"year": 2010, "director": "Steven Spielberg", "genre": 
 def movie_info(title):
     if title in movies:
         details=movies[title]
-        print(f"{title}:")
+        print(f"{title}: {details}")
 
         for  x, y in details.items():
             print(f"{x}:{y}")
@@ -42,7 +65,7 @@ def find_movie_year(title):
 title=input("Enter the movie title:")
 
 movie_info(title)
-
+'''
 
 
 #-----------------------------------------------
