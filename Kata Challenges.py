@@ -1,6 +1,29 @@
 
+#25th Sept set and unique operations
+# Step 1: Create two sets
+fruits = {"apple", "banana", "orange", "kiwi"}
+vegetables = {"carrot", "spinach", "broccoli", "kiwi"}
 
+# Step 2: Find the common elements (intersection)
+common_items = fruits.intersection(vegetables)
+print("Common items:", common_items)
+
+# Step 3: Find the elements only in the fruit set (difference)
+only_fruits = fruits.difference(vegetables)
+print("Only fruits:", only_fruits)
+
+# Step 4: Combine the two sets (union)
+all_items = fruits.union(vegetables)
+print("All items:", all_items)
+
+# Step 5: Check if one set is a subset of the other
+is_subset = fruits.issubset(all_items)
+print(f"Are all fruits in all_items set?: {is_subset}")
+ 
+
+#-----------------------------------------------
 #24th Sept - Warm up 
+'''
 def word_frequency(word): 
     words= word.lower().split()
     print(words)
@@ -21,6 +44,7 @@ def word_frequency(word):
 text = "This is a test. This test is simple, but this is just a test."
 word_frequency(text)      
 
+'''
 #-----------------------------------------------
 
 
